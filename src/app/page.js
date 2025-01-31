@@ -112,9 +112,9 @@ export default function AIPythonTutor() {
         <img src={aiAvatar} alt="AI Tutor Avatar" className="w-20 h-20 rounded-full" />
       </div>
       <div className="flex justify-center mb-4">
-        <Button onClick={() => changeAvatar("avatar1.png")}>Avatar 1</Button>
-        <Button onClick={() => changeAvatar("avatar2.png")} className="ml-2">Avatar 2</Button>
-        <Button onClick={() => changeAvatar("avatar3.png")} className="ml-2">Avatar 3</Button>
+        <Button onClick={() => changeAvatar("E:\projects\skc_srinivasa_pythontutor\public\article.jpeg")}>Avatar 1</Button>
+        <Button onClick={() => changeAvatar("E:\projects\skc_srinivasa_pythontutor\public\arr.png")} className="ml-2">Avatar 2</Button>
+        <Button onClick={() => changeAvatar("E:\projects\skc_srinivasa_pythontutor\public\arr1.jpeg")} className="ml-2">Avatar 3</Button>
       </div>
       <Card className="mb-4 p-4">
         <CardContent>
