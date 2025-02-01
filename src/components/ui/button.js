@@ -1,9 +1,9 @@
-// Example for src/components/ui/button.js
-import * as React from "react"
-import { Slot } from "@radix-ui/react-slot"
-import { cva } from "class-variance-authority"
-import { cn } from "@/lib/utils"
+import * as React from "react";
+import { Slot } from "@radix-ui/react-slot";
+import { cva } from "class-variance-authority";
+import { cn } from "../../lib/utils";
 
+// Defining button variants using cva for class variance
 const buttonVariants = cva(
   "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background",
   {
@@ -27,19 +27,22 @@ const buttonVariants = cva(
       size: "default",
     },
   }
-)
+);
 
+// Button component using forwardRef to pass refs
 const Button = React.forwardRef(({ className, variant, size, asChild = false, ...props }, ref) => {
-  const Comp = asChild ? Slot : "button"
+  const Comp = asChild ? Slot : "button"; // Use Slot if asChild is true, else use button
   return (
     <Comp
-      className={cn(buttonVariants({ variant, size, className }))}
+      className={cn(buttonVariants({ variant, size, className }))} // Applying classes dynamically based on variants
       ref={ref}
-      {...props}
+      {...props} // Passing the remaining props to the button element
     />
-  )
-})
+  );
+});
 
-Button.displayName = "Button"
+// Display name for debugging purposes
+Button.displayName = "Button";
 
-export { Button, buttonVariants } 
+// Exporting the Button component and buttonVariants for reuse
+export { Button, buttonVariants };
